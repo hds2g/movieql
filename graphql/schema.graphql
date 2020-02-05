@@ -1,9 +1,11 @@
-type hds2g {
+type Person {
+  id: Int!
   name: String!
   age: Int!
   gender: String!
 }
 
 type Query {
-  person: hds2g!
+  people: [Person]!
+  person(id: Int!): Person
 }
